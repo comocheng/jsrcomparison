@@ -53,9 +53,9 @@ common-properties:
         units: bar
         relative-uncertainty:
     temperature: &temp
-	value-list: [500,525,550,575,600,625,650,675,700,725,750,775,800,825,850,875,900,925,950,975,1000,1025,1050,1075,1100] 
+        column-name: Temperature # values are provided in the CSV file
         units: K
-        relative-uncertaintiy: .01
+        absolute-uncertaintiy: 3
     inlet: &in
         - species: n-heptane
           InChI: 1S/C7H16/c1-3-5-7-6-4-2/h3-7H2,1-2H3
@@ -69,8 +69,8 @@ common-properties:
           InChI: 1S/O2/c1-2
           mole-fraction: 0.22
           relative-uncertainty: .05 
-    Outlet: &out
-        - species: carbon monoxide
+    outlet: &out
+        - species: carbon monoxide  # species names must correspond with column headers in the CVS file
           InChI: 1S/CH2O/c1-2/h1H2
         - species: carbon dioxide
           InChI: 1S/CO2/c2-1-3
