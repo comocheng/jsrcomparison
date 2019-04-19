@@ -163,7 +163,10 @@ common-properties:
         - species: 2-methyl-dihydrofuranone
           InChI: 1S/C5H8O2/c1-4-5(6)2-3-7-4/h4H,2-3H2,1H3
         - species: sum of cyclic ether with 5 atoms
-          InChI: ?
+          InChI: ?  # could try to get fancy and do SMARTS strings instead of InChI
+                    # or we could just specify "unknown" somehow.
+                    # We don't want to discard the data, even if we can't automatically
+                    # compare to simulations.
         - species: sum of cyclic ether with 4 atoms
           InChI: ?
         - species: sum of cyclic ether with 3 atoms
